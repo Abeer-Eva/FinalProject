@@ -1,0 +1,21 @@
+:root{
+  --mainWhite:#f3f3f3;
+  --mainYellow:#ffa400;
+  --mainDark:#ffa400;
+  --mainRed:#ffa400;
+  --mainPink:#f3f3f3;
+}
+body{
+  font-family: 'Permanent Marker', cursive !important;
+  background: var (--mainRed) !important;
+  align-items: center;
+  justify-content: center;
+}
+.text-title {
+font-family: 'Permanent Marker', cursive ;
+letter-spacing: 0.3rem;
+text-transform: uppercase;
+}
+.text-red {
+	color: var(--mainRed);
+}
