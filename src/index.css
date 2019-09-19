@@ -211,9 +211,14 @@ body {
   border-radius: 4px;
   padding: 5px;
   border-color: #C70039;
+  
 }
 
 .navbar-brand {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+.cart-btn {
+  width: 90px;
+  height: 90px;
 }
