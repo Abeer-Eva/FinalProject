@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import {Link } from 'react-router-dom';
 import logo from "./lex-clothes-logo.png";
-import cart from "./iconfinder_shopping-cart_216477 (1).png";
+import cart from "./shopping-cart.png";
 import styled from 'styled-components';
-import { ButtonContainer }from "./Button";
+import { ButtonContainer } from "./Button";
+
 export default class Navbar extends Component {
 	render() {
 		return (
@@ -12,23 +13,23 @@ export default class Navbar extends Component {
 			
 
 <Link to='/'>
-<img src={logo} alt="kläd butik" className="navbar-brand"/>
+<img src={logo} alt="kläd butik" className="navbar-brand" />
  </Link>
  
  <ul className="navbar-nav algin-items-center">
  <li className="nav-item ml-5">
  <Link to="/" className="nav-link">
- products
+ 
  </Link>
  </li>
  </ul>
  <Link to="/cart" className="ml-auto">
  <ButtonContainer>
- <span>
- <img src={cart} alt="kläd butik" className="navbar-brand"/> 
+ <span className="mr-2">
+ <img src={cart} alt="kläd butik" className="cart-btn"/> 
  <i className="fas fa-cart-plus" />
  </span>
- My cart
+     My Cart
  </ ButtonContainer>
  </Link>
 			</NavWrapper>
@@ -36,7 +37,7 @@ export default class Navbar extends Component {
 	}
 }
 const NavWrapper = styled.nav`
-background:var(--mainRed);
+background:var(--mainWhite);
 .nav-link{
 	color:var(--mainWhite)!important;
 	font-size:1.3rem;

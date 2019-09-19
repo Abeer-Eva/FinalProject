@@ -1,53 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
+//import searchIcon from './search-icon.png';
+class Menu extends React.Component{
 
-export default class Card extends Component {
-  constructor() {
-    super();
-    
-    this.state = {
-      showMenu: false,
-    };
-    
-    this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
-  }
-  
-  showMenu(event) {
-    event.preventDefault();
-    
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeMenu);
-    });
-  }
-  
-  closeMenu() {
-    this.setState({ showMenu: false }, () => {
-      document.removeEventListener('click', this.closeMenu);
-    });
-  }
+	 render() {
+        return (
+        	<div className="container center">
+        <nav className="menu">
+            <h2 className="menu__logo">Products</h2>
 
-  render() {
-   
-    return (
-      <div>
-        <button onClick={this.showMenu}>
-        Menu
-        </button>
-        {
-          this.state.showMenu
-            ? (
-              <div className="Menu">
-                <button > Man  </button> 
-                <button> Kvinna</button>
-                <button> Barn</button>
-              </div>
-            )
-            : (
-              null
-            )
-        }
-      </div>
-    );
-  
-  }
+            <div className="menu__right">
+                <ul className="menu__list">
+                    <li className="menu__list-item"><a className="menu__link menu__link--active" href="http://localhost:3000/">Kvinna</a></li>
+                    <li className="menu__list-item"><a className="menu__link" href="#">Man</a></li>
+                    
+                    
+                </ul>
+
+                <button  className="menu__search-button"></button>
+
+                <form className="menu__search-form hide" method="POST">
+                    <input className="menu__search-input" placeholder="Type and hit enter" />
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
+        );
+    }
 }
+
+export default Menu;
