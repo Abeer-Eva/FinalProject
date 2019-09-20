@@ -12,11 +12,11 @@ cursor:pointer;
 margin:0.2rem 0.2rem 0.2rem 0;
 transition:all 0.5s ease-in-out;
 &:hover{
-background:var(--mainWhite
+background:var(--mainYellow
 	);
 }
 
-color:var(--mainGray);
+color:var(--mainRed);
 &:foucs{
 	outline:none;
 }`;

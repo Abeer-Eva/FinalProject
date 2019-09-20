@@ -9,6 +9,7 @@ import Cart from "./Component/Cart";
 import Detalis from "./Component/Details";
 import Default from "./Component/Default";
 import Menu from './Component/Menu';
+import Modal from './Component/Modal';
 
 class App extends Component {  
 
@@ -25,7 +26,9 @@ class App extends Component {
      <Route path="/cart" Component={Cart} />
      <Route Component={Default} />
      </Switch>
+     
      <ProductList />
+     <Modal />
      <Detalis />
      <Cart />
      <Default />
