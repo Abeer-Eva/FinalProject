@@ -5,7 +5,7 @@ import"./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Component/Navbar";
 import ProductList from "./Component/ProductList";
-import Cart from "./Component/Cart";
+import Cart from "./Component/Cart/Cart";
 import Detalis from "./Component/Details";
 import Default from "./Component/Default";
 import Menu from './Component/Menu';
@@ -21,10 +21,13 @@ class App extends Component {
      <Navbar />
      <Menu />
      <Switch>
-     <Route path="/" Component={ProductList} />
-     <Route path="/details" Component={Detalis} />
-     <Route path="/cart" Component={Cart} />
-     <Route Component={Default} />
+     <Route 
+     path="/" 
+     Component={ProductList}
+      />
+     <Route path="/details" component={Detalis} />
+     <Route path="/cart" component={Cart} />
+     <Route component={Default} />
      </Switch>
      
      <ProductList />

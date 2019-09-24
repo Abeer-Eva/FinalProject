@@ -22,7 +22,7 @@ export default class Product extends Component {
 					  </Link>
 					  
 					  <button className="cart-btn" disabled={inCart ? true : false} onClick={()=> {
-						 //value.addToCart(id);
+						 value.addToCart(id);
 						 value.openModal(id);
 						 }}  >
 					  <img src= {cart} className="cart-btn1" alt = "cart" height = '30px' width = '30px' />
@@ -106,10 +106,10 @@ const ProductWrapper = styled.div`
 		color: var(--mainBlack);
 		font-size: 1.4rem;
 		border-radius: 0.5,0,0,0;
-		transform: translate(100%, 100%);
+		transform: translate(5%, 5%);
 	}
 	.img-container: hover .cart-btn{
-		transform: translate(0, 0);
+		transform: translate(0,0);
 	}
 	.cart-btn: hover {
 		color: var(--mainRed);
