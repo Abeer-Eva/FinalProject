@@ -4,7 +4,7 @@
   --mainDark:#C70039;
   --mainRed:#C70039;
   --mainPink:#ca1c50;
-  --mainGray: #5c5a56;
+  --mainPink: #ad7194;
   
 }
 body{
@@ -21,4 +21,21 @@ text-transform: uppercase;
 }
 .text-red {
 	color: var(--mainRed);
+}
+.btn-black{
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color:var(--mainPink);
+  border-radius:0 !important;
+  border:0.1rem var(--mainDark) !important;
+}
+.btn-black:hover{
+  background: var(--mainPink) !important;
+  color:var(--mainWhite) !important;
+}
+.cart-icon{
+  cursor:pointer;
+  font-size:1.2rem;
+  color:var(--mainYellow);
 }
