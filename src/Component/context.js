@@ -8,7 +8,7 @@ class ProductProvider extends Component {
 	state ={
 		products: [],
 		detailProduct: detailProduct,
-		cart: [],
+		cart: storeProducts,
 		modalOpen: false,
 		modalProduct: detailProduct,
 		cartSubTotal:0,
@@ -54,7 +54,8 @@ class ProductProvider extends Component {
 		this.setState(() => {
 			return {product: tempProducts, cart:[...this.state.cart, product] };
 		
-		},() =>{console.log(this.state); 
+		},
+		() =>{this.addTotals ();
 		});
 	};
 	
@@ -71,17 +72,36 @@ class ProductProvider extends Component {
 		 
 	  };
 	  increment=(id)=> {
-	  	console.log('this method is increment')
-	  }
+	  	console.log('this method is increment');
+	  };
 	  decrement =(id)=> {
-	  	console.log('this method is decrement')
-	  }
+	  	console.log('this method is decrement');
+	  };
 	  removItem=(id)=>{
-	  	console.log('removed item')
-	  }
+	  	console.log("item removed");
+	  };
 	  clearCart =()=> {
-	  	console.log('clearing cart')
-	  }
+	  	this.setState(()=> {
+			  return {cart:[]};
+		  },()=>{
+			  this.setProducts();
+		  
+		  });
+	  };
+	  addTotals =() => {
+		  let subTotal =0;
+		  this.state.cart.map(item =>(subTotal+= item.total));
+		  const tempTax =subTotal *0.1;
+		  const tax =parseFloat(tempTax.toFixed(2));
+		  const total =subTotal+ tax
+		  this.setState(()=>{
+			  return{
+		cartSubTotal: subTotal,
+		  cartTax:tax,
+		  cartTotal:total
+	  };
+	});
+}
 	render() {
 		return (
 			<ProductContext.Provider value={{
@@ -102,4 +122,4 @@ class ProductProvider extends Component {
 	}
 }
 const ProductConsumer = ProductContext.Consumer;
-export { ProductProvider, ProductConsumer};
+export { ProductProvider, ProductConsumer} ;
