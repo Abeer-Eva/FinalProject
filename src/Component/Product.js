@@ -22,7 +22,7 @@ export default class Product extends Component {
 					  </Link>
 					  
 					  <button className="cart-btn" disabled={inCart ? true : false} onClick={()=> {
-						 //value.addToCart();
+						 value.addTOCart(id);
 						 value.openModal(id);
 						 }}  >
 					  <img src= {cart} className="cart-btn1" alt = "cart" height = '30px' width = '30px' />

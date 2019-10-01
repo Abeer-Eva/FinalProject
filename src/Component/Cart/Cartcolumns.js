@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function Cartcolumns () {
 	return (
 		<div className="container-fluid text-center d-none d-lg-block">
