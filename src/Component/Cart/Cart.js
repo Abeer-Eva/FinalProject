@@ -12,13 +12,13 @@ export default class Cart extends Component {
 			<ProductConsumer>
 			{value => {
 				const {cart} = value;
-			if(cart.length>0){
+			if(cart.length > 0){
 					return(
 						<React.Fragment>
 			<Title name="Your" title="cart"/>
 			<Cartcolumns />
 			<CartList value={value}/>
-			<CartTotals value={value}/>
+			<CartTotals value={value} history = {this.props.history} />
 			</React.Fragment>
 			);
 		}
